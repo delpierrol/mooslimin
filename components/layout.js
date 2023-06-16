@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Container from 'react-bootstrap/Container';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
@@ -14,49 +15,50 @@ export default function Layout({ children, home }) {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="Mooslimin - Tempat Belanja Pria yang #LakiBanget"
         />
         <meta
           property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle,
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
+          content="/images/logo.svg"/>
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={400}
-              width={600}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
+      <header className="fixed-top">
+        <div className="text-center bg-mooslimin-primary py-2">
+          <div className="container">
+            25% launching discount - For orders before 12PM - Diskon spesial  khusus launching (untuk pemesanan sebelum 12.00 WIB)
+          </div>
+        </div>
+        <nav className="navbar navbar-expand-md navbar-light bg-light navbar-mooslimin">
+          <Container>
+            <a className="navbar-brand pe-5" href="#">
+              <img src="/images/logo.svg" alt="" width="144" height="40" />
+            </a>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <ul className="navbar-nav me-auto mb-2 mb-md-0">
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a className="nav-link dropdown-toggle" href="#">Link</a>
+                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a className="dropdown-item" href="#">Action</a></li>
+                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                    <li><hr className="dropdown-divider" /></li>
+                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form className="d-flex">
+                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <button className="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </Container>
+        </nav>
       </header>
       <main>{children}</main>
       {!home && (

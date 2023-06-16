@@ -26,6 +26,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <article>
         <h1 className={utilStyles.headingXl}>{postData.title}</h1>
