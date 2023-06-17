@@ -4,6 +4,9 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
@@ -29,11 +32,22 @@ export default function Layout({ children, home }) {
             25% launching discount - For orders before 12PM - Diskon spesial  khusus launching (untuk pemesanan sebelum 12.00 WIB)
           </div>
         </div>
-        <nav className="navbar navbar-expand-md navbar-light bg-light navbar-mooslimin">
+        <Navbar bg="light" expand="md" className="navbar-mooslimin">
           <Container>
-            <a className="navbar-brand pe-5" href="#">
-              <img src="/images/logo.svg" alt="" width="144" height="40" />
-            </a>
+            <Navbar.Brand href="" className="pe-5">
+              <img src="/images/logo.svg" alt="Mooslimin" width="144" height="40" />
+            </Navbar.Brand>
+            <Navbar.Collapse id="navbarCollapse">
+              <Nav className="me-auto mb-2 mb-md-0">
+                <Nav.Link href="#home">Home</Nav.Link>
+                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                  <NavDropdown.Item href="#action/3.2">Another Action</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#action/3.3">Separated Link</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav me-auto mb-2 mb-md-0">
                 <li className="nav-item">
@@ -58,7 +72,7 @@ export default function Layout({ children, home }) {
               </form>
             </div>
           </Container>
-        </nav>
+        </Navbar>
       </header>
       <main>{children}</main>
       {!home && (
