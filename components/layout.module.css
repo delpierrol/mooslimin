@@ -1,4 +1,33 @@
-.bg-mooslimin
+.componentinputField
 {
-  background-color: var(--typography-color-active) !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: var(--br-81xl);
+  border: 1px solid var(--fill-background-bg-mute-secondary);
+  box-sizing: border-box;
+  width: 360px;
+  height: 36px;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-xs);
+  color: var(--typography-color-inactive);
 }
+
+.searchInput
+{
+  border: 0;
+  font-weight: 300;
+  font-family: var(--caption-medium-medium-small);
+  font-size: var(--caption-regular-regular-large-size);
+  background-color: transparent;
+  flex: 1;
+  position: relative;
+  line-height: 20px;
+  color: var(--fill-background-bg-inactive);
+  text-align: left;
+}
+  .searchInput:focus
+  {
+    outline: none;
+  }

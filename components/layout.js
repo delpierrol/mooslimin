@@ -3,15 +3,30 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import {
+  Nav,
+  Navbar,
+  NavDropdown,
+  Col,
+  Row,
+  Container,
+  Dropdown,
+} from "react-bootstrap";
+import React, { useState } from 'react';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
+
+  const [show, setShow] = useState(false);
+  const showDropdown = (e)=>{
+      setShow(!show);
+  }
+  const hideDropdown = e => {
+      setShow(false);
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -40,36 +55,92 @@ export default function Layout({ children, home }) {
             <Navbar.Collapse id="navbarCollapse">
               <Nav className="me-auto mb-2 mb-md-0">
                 <Nav.Link href="#home">Home</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">Another Action</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.3">Separated Link</NavDropdown.Item>
+                <NavDropdown title="Dropdown" 
+                  id="basic1" 
+                  className="dropdown-megamenu"
+                  show={show}
+                   onMouseEnter={showDropdown} 
+                   onMouseLeave={hideDropdown}
+                >
+                  <Container className="eventsNav pt-0 mt-0">
+                    <Row>
+                      <Col xs="12" md="4" className="text-left">
+                        <Dropdown.Header>Catering</Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Header>
+                          Classes
+                        </Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Divider className="d-md-none" />
+                      </Col>
+                      <Col xs="12" md="4" className="text-left">
+                        <Dropdown.Header>Rentals</Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Header>
+                          Seasonal
+                        </Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                      </Col>
+                      <Col xs="12" md="4" className="text-left">
+                        <Dropdown.Header>
+                          Rentals
+                        </Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Divider />
+                        <Dropdown.Header>
+                          Seasonal
+                        </Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                      </Col>
+                    </Row>
+                  </Container>
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-              <ul className="navbar-nav me-auto mb-2 mb-md-0">
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a className="nav-link dropdown-toggle" href="#">Link</a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a className="dropdown-item" href="#">Action</a></li>
-                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                    <li><hr className="dropdown-divider" /></li>
-                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form className="d-flex">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
-              </form>
+            <div className={styles.componentinputField}>
+              <img className="{styles.icon16}" alt="" src="/images/component/navigation/search.svg" />
+              <input
+                className={styles.searchInput}
+                type="text"
+                placeholder="Cari..."
+                maxLength
+                minLength
+              />
             </div>
           </Container>
         </Navbar>

@@ -98,3 +98,14 @@ body {
     line-height: 20px;
     font-weight: 300
   }
+
+  .navbar-mooslimin .dropdown
+  {
+    position:inherit !important;
+  }
+
+  .navbar-mooslimin .dropdown-menu
+  {
+    width:100%;
+    transform: translate(0px, 0px);
+  }
