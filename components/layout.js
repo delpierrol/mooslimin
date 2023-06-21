@@ -142,6 +142,16 @@ export default function Layout({ children, home }) {
                 minLength
               />
             </div>
+            <div className={styles.componentnavigationheaderMeChild + " mx-4"} />
+            <div className={styles.rightIcon}>
+              <div className={styles.div}>0</div>
+              <img className={styles.personIcon} alt="" src="/images/component/navigation/person.svg" />
+              <img
+                className={styles.localMallIcon}
+                alt=""
+                src="/images/component/navigation/local_mall.svg"
+              />
+            </div>
           </Container>
         </Navbar>
       </header>

@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import Banner from '../components/home/banner';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,6 +22,7 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      <Banner />
       <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>

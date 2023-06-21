@@ -6,6 +6,7 @@ body {
   font-family: var(--caption-regular-regular-small) !important;
   font-size: var(--caption-medium-medium-large-size) !important;
   color: var(--typography-color-warning) !important;
+    margin-top: 6rem !important;
 }
 :root {
   /* fonts */
@@ -107,5 +108,5 @@ body {
   .navbar-mooslimin .dropdown-menu
   {
     width:100%;
-    transform: translate(0px, 0px);
+    transform: translate(0px, -5px);
   }
