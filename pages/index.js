@@ -1,10 +1,14 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
-import Link from 'next/link';
-import Date from '../components/date';
 import Banner from '../components/home/banner';
+import ProductNewArrival from '../components/home/section/new-arrival/product-new-arrival';
+import ProductOutfit from '../components/home/section/outfit/product-outfit';
+import BlogContent from '../components/home/section/blog/blog-content';
+import ProductBestSeller from '../components/home/section/best-seller/product-best-seller';
+import Collection from '../components/home/section/collection/collection';
+import BrandTitle from '../components/home/section/brand/brand-title';
+import Brand from '../components/home/section/brand/brand';
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -23,7 +27,14 @@ export default function Home({ allPostsData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Banner />
-      <section className={utilStyles.headingMd}>
+      <ProductNewArrival />
+      <ProductOutfit />
+      <BlogContent />
+      <ProductBestSeller />
+      <Collection />
+      <BrandTitle />
+      <Brand />
+      {/* <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{' '}
@@ -76,7 +87,7 @@ export default function Home({ allPostsData }) {
             <div className="modal-body">...</div>
           </div>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 }

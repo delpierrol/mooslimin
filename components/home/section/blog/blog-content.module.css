@@ -1,0 +1,158 @@
+.image10Icon {
+  display: flex;
+  /* position: relative; */
+  border-radius: var(--br-5xs);
+  /* width: 664px; */
+  height: 443px;
+  object-fit: cover;
+  z-index: 0;
+}
+.minsRead {
+  position: relative;
+  line-height: 20px;
+  font-weight: 300;
+}
+.fashionMuslimPilihan {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--title-medium-medium-large-size);
+  line-height: 32px;
+  font-weight: 500;
+  color: var(--typography-color-default);
+}
+.moosliminTeam {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.infoChild {
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--fill-background-bg-inactive);
+  width: 3px;
+  height: 3px;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--caption-medium-medium-large-size);
+  color: var(--fill-background-bg-inactive);
+}
+.info,
+.itIsA,
+.title {
+  align-self: stretch;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  z-index: 1;
+}
+.itIsA {
+  position: relative;
+  font-size: var(--title-bold-bold-small-size);
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-body);
+  z-index: 2;
+}
+.badge,
+.blogLarge {
+  display: flex;
+  flex-direction: column;
+}
+.badge {
+  margin: 0 !important;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--typography-color-white);
+  padding: var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  color: var(--typography-color-default);
+}
+.blogLarge {
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-start;
+  /* position: relative; */
+  gap: var(--gap-5xl);
+}
+.image12Icon {
+  position: relative;
+  border-radius: var(--br-5xs);
+  width: 132px;
+  height: 88px;
+  object-fit: cover;
+}
+.loremIpsumDolor {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--body-moderate-size);
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--typography-color-default);
+}
+.title1 {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+}
+.itIsA1 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--title-bold-bold-small-size);
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-body);
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.blogSmall {
+  align-self: stretch;
+  flex-direction: row;
+  gap: var(--gap-5xl);
+}
+.blogContent,
+.blogSmall,
+.list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.list {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-21xl);
+}
+.blogContent {
+  background-color: var(--fill-background-bg-mute-primary);
+  /* width: 1440px; */
+  height: 695px;
+  max-width: 100%;
+  flex-direction: row;
+  padding: var(--padding-5xl) var(--padding-21xl) var(--padding-45xl);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  text-align: left;
+  font-size: var(--caption-medium-medium-small-size);
+  color: var(--typography-color-caption);
+  font-family: var(--headline-medium-medium-moderate);
+}

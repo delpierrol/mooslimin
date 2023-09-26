@@ -1,0 +1,115 @@
+.imageIcon {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.propertiescomponentproductT {
+  flex: 1;
+  z-index: 0;
+}
+.brandName,
+.productTitle,
+.propertiescomponentproductT {
+  align-self: stretch;
+  position: relative;
+}
+.brandName {
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-caption);
+}
+.productTitle {
+  font-size: var(--body-moderate-size);
+  line-height: 24px;
+  font-weight: 500;
+}
+.propertiescomponentproductT2 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.idr100000 {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+  z-index: 0;
+}
+.strike {
+  position: absolute;
+  margin: 0 !important;
+  width: 100%;
+  top: 9.5px;
+  right: 0;
+  left: 0;
+  background-color: var(--fill-background-bg-inactive);
+  height: 1px;
+  z-index: 1;
+}
+.propertiescomponentproductT3 {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-5xs);
+  font-size: var(--caption-medium-medium-large-size);
+  color: var(--fill-background-bg-inactive);
+}
+.price,
+.propertiescomponentproductT1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.propertiescomponentproductT1 {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-7xs);
+  z-index: 1;
+}
+.newlyAdded {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.badge,
+.componentproductTiles {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.badge {
+  margin: 0 !important;
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: var(--typography-color-white);
+  padding: var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+  font-size: var(--caption-medium-medium-small-size);
+}
+.componentproductTiles {
+  flex: 1;
+  height: 492px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--title-bold-bold-small-size);
+  color: var(--typography-color-default);
+  font-family: var(--headline-medium-medium-moderate);
+}

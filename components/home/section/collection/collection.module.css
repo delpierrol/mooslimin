@@ -1,0 +1,88 @@
+.highlight {
+  align-self: stretch;
+  position: relative;
+  line-height: 24px;
+  font-weight: 300;
+}
+.dailywearCollection {
+  margin: 0;
+}
+.dailywearCollectionKoleksiContainer {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--headline-medium-medium-moderate-size);
+  line-height: 56px;
+  color: var(--fill-secondary-secondary-default);
+}
+.title {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  font-size: var(--body-moderate-size);
+}
+.image4Icon {
+  position: relative;
+  width: 320px;
+  height: 452px;
+  object-fit: cover;
+}
+.majeedOurTrustedContainer {
+  position: relative;
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--fill-secondary-secondary-default);
+  display: inline-block;
+  width: 556px;
+}
+.primaryMedium {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.componentnavigationbutton,
+.titleParent {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+.componentnavigationbutton {
+  border-radius: var(--br-81xl);
+  background-color: var(--fill-secondary-secondary-default);
+  height: 48px;
+  flex-direction: row;
+  padding: var(--padding-xl) var(--padding-base);
+  text-align: left;
+  color: var(--typography-color-white);
+}
+.titleParent {
+  flex: 1;
+  border-radius: var(--br-21xl);
+  height: 1000px;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 0 var(--padding-5xl);
+  gap: var(--gap-21xl);
+}
+.image5Icon {
+  position: relative;
+  /* width: 716px; */
+  width: 60%;
+  height: 1016px;
+  object-fit: cover;
+}
+.collection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+  text-align: center;
+  font-size: var(--title-bold-bold-small-size);
+  color: var(--typography-color-warning);
+  font-family: var(--headline-medium-medium-moderate);
+}

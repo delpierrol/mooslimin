@@ -17,6 +17,7 @@ body {
   --caption-regular-regular-small-size: 12px;
   --caption-medium-medium-large-size: 14px;
   --body-small-size: 16px;
+  --title-bold-bold-small-size: 16px;
   --title-medium-medium-moderate-size: 18px;
   --headline-medium-medium-moderate-size: 40px;
   --headline-medium-medium-small-size: 28px;
@@ -25,6 +26,7 @@ body {
   /* Colors */
   --typography-color-white: #fff;
   --fill-secondary-secondary-light: #fdf5e9;
+  --fill-primary-primary-default: #486456;
   --typography-color-active: #486456;
   --typography-color-body: #333;
   --typography-color-mute: #ccc;
@@ -36,6 +38,7 @@ body {
   --typography-color-warning: #f2e4cc;
   --fill-tertiary-tertiary-default: #da4c4c;
   --typography-color-caption: #666;
+  
 
   /* Gaps */
   --gap-61xl: 80px;
