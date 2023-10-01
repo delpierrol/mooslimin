@@ -1,31 +1,25 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from "./home-section-title.module.css";
 
-const HomeSectionTitle = ({ title, subtitle }) => {
+export default function HomeSectionTitle({ title, subtitle, onClick }) {
   return (
-    <Container>
-      <Row>
-        <Col xs="6" md="6" className="text-left">
-          <div className={styles.title}>
-            <div className={styles.newArrivalsProduk}>{title}</div>
-            <div className={styles.checkOutWhats}>{subtitle}</div>
+    <Container className="py-4">
+      <Row className="g-3">
+        <Col xs="6" md="6">
+          <div className={styles.container}>
+            <div className={styles.title}>{title}</div>
+            <div className={styles.subtitle}>{subtitle}</div>
           </div>
         </Col>
-        <Col xs="6" md="6" className="text-right">
-          <Button variant="outline-primary">Shop new arrival Belanja produk baru</Button>{' '}
-          {/* <div className={styles.componentnavigationbutton}>
-            <div className={styles.secondaryMedium}>
-              
-            </div>
-          </div> */}
+        <Col xs="6" md="6" className="d-none d-md-block align-self-center text-end">
+          <Button variant="outline-primary" className="btn-outline-primary"
+            onClick={onClick} >Shop new arrival Belanja produk baru</Button>{' '}
+        </Col>
+        <Col className="d-block d-md-none align-self-center text-end">
+          <Button variant="outline-primary" className="btn-outline-primary"
+            onClick={onClick}>Belanja</Button>{' '}
         </Col>
       </Row>
-      {/* <div className={styles.header}>
-
-
-      </div> */}
     </Container>
   );
 };
-
-export default HomeSectionTitle;

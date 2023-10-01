@@ -1,11 +1,47 @@
-.bannerIcon {
+.title {
+  position: relative;
+  line-height: 56px;
+  font-weight: 500;
+}
+.subtitle {
+  margin: 0;
+  line-break: anywhere;
+  width: 100%;
+}
+.containerSubtitle {
+  position: relative;
+  font-size: var(--title-bold-bold-small-size);
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-body);
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  width: 676px;
+}
+.containerTitle {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-45xl) var(--padding-21xl) var(--padding-21xl);
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xs);
+  text-align: left;
+  font-size: var(--headline-medium-medium-moderate-size);
+  color: var(--typography-color-default);
+  font-family: var(--headline-medium-medium-moderate);
+}
+.imageBrand {
   position: relative;
   width: 434.67px;
   height: 217px;
   object-fit: cover;
   z-index: 0;
 }
-.mabrookidn {
+.brandName,
+.brandRating,
+.brandReview {
   position: relative;
   line-height: 20px;
   font-weight: 500;
@@ -27,7 +63,7 @@
 .dot {
   position: relative;
   border-radius: 50%;
-  background-color: var(--fill-background-bg-inactive);
+  background-color: var(--typography-color-inactive);
   width: 3px;
   height: 3px;
 }
@@ -91,48 +127,20 @@
 }
 .card {
   flex: 1;
-  border-radius: var(--br-5xs);
+  border-radius: 18px;
   border: 1px solid var(--fill-background-bg-mute-primary);
   overflow: hidden;
   align-items: flex-start;
   justify-content: flex-start;
-  position: relative;
-}
-.bg,
-.header1 {
-  align-self: stretch;
   position: relative;
 }
 .bg {
+  align-self: stretch;
+  position: relative;
   background-color: var(--fill-secondary-secondary-light);
-  height: 217px;
-}
-.header1 {
-  display: flex;
-  flex-direction: column;
-  padding: var(--padding-37xl) var(--padding-base) var(--padding-5xl);
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-base);
-}
-.brand,
-.card1 {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.card1 {
-  flex: 1;
-  border-radius: var(--br-5xs);
-  border: 1px solid var(--fill-background-bg-mute-primary);
-  overflow: hidden;
-  flex-direction: column;
 }
 .brand {
-  width: 1440px;
   max-width: 100%;
-  flex-direction: row;
-  padding: 0 var(--padding-21xl);
   box-sizing: border-box;
   gap: var(--gap-9xl);
   text-align: left;

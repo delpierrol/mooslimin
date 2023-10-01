@@ -4,10 +4,8 @@
   font-weight: 500;
 }
 .badge {
-  margin: 0 !important;
+  margin: 12px !important;
   position: absolute;
-  top: 12px;
-  left: 60px;
   background-color: var(--typography-color-white);
   display: flex;
   flex-direction: column;

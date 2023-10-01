@@ -1,18 +1,19 @@
+import { Col, Container, Row } from "react-bootstrap";
 import ProductItem from "../../../product/product-item";
-import SectionTitle from "../home-section-title";
-import styles from "./../new-arrival/product-new-arrival.module.css";
-const ProductNewArrival = () => {
+import HomeSectionTitle from "../home-section-title";
+
+export default function ProductNewArrival() {
+  const images = ["/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png"];
   return (
     <div>
-      <SectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
-      <div className={styles.image33Parent}>
-        <ProductItem image={'/images/product/image@2x.png'} />
-        <ProductItem image={'/images/product/image@2x.png'} />
-        <ProductItem image={'/images/product/image@2x.png'} />
-        <ProductItem image={'/images/product/image@2x.png'} />
-      </div>
+      <HomeSectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
+      <Container className="pb-5">
+        <Row>
+          {images.map((image) => (
+            <Col xs="6" md="3"><ProductItem image={image} /></Col>
+          ))}
+        </Row>
+      </Container>
     </div>
   );
 };
-
-export default ProductNewArrival;

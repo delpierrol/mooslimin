@@ -89,15 +89,14 @@ body {
   line-height: 20px;
   font-weight: 500;
 }
-
 .navbar-mooslimin
 {
   font-size: var(--caption-medium-medium-large-size);
   color: var(--typography-color-body);
   font-family: var(--caption-regular-regular-small);
 }
-  .navbar-mooslimin .nav-link
-  {
+.navbar-mooslimin .nav-link
+{
     position: relative;
     line-height: 20px;
     font-weight: 300
@@ -112,4 +111,18 @@ body {
   {
     width:100%;
     transform: translate(0px, -5px);
+  }
+  .btn-outline-primary {
+    border-color: #486456;
+    border-radius: 100em;
+    color: #486456;
+  }
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary.active {
+    background-color: #486456;
+    border-color: #486456;
+    border-radius: 100em;
+    color: white;
   }

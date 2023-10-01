@@ -1,5 +1,11 @@
-.checkOutWhats,
-.newArrivalsProduk {
+.container {
+  text-align: left;
+  font-size: var(--headline-medium-medium-small-size);
+  color: var(--typography-color-default);
+  font-family: var(--headline-medium-medium-moderate);
+}
+.subtitle,
+.title {
   position: relative;
   line-height: 32px;
   font-weight: 500;
@@ -7,52 +13,9 @@
   align-items: flex-end;
   width: 648px;
 }
-.checkOutWhats {
+.subtitle {
   font-size: var(--title-bold-bold-small-size);
   line-height: 20px;
   font-weight: 300;
   color: var(--typography-color-body);
-}
-.title {
-  text-align: left;
-  font-size: var(--headline-medium-medium-small-size);
-  color: var(--typography-color-default);
-  font-family: var(--headline-medium-medium-moderate);
-  /* flex: 1; */
-  /* display: flex; */
-  /* flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start; */
-  /* gap: var(--gap-5xs); */
-}
-.secondaryMedium {
-  position: relative;
-  line-height: 20px;
-  font-weight: 500;
-}
-.componentnavigationbutton,
-.header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.componentnavigationbutton {
-  border-radius: var(--br-81xl);
-  border: 1px solid var(--fill-primary-primary-default);
-  box-sizing: border-box;
-  height: 48px;
-  padding: var(--padding-xl) var(--padding-base);
-  justify-content: center;
-  font-size: var(--title-bold-bold-small-size);
-  color: var(--typography-color-body);
-}
-.header {
-  align-self: stretch;
-  padding: var(--padding-45xl) var(--padding-21xl) var(--padding-5xl);
-  justify-content: flex-start;
-  gap: var(--gap-21xl);
-  text-align: left;
-  font-size: var(--headline-medium-medium-small-size);
-  color: var(--typography-color-default);
-  font-family: var(--headline-medium-medium-moderate);
 }

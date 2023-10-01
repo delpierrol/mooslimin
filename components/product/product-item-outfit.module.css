@@ -1,4 +1,4 @@
-.imageIcon {
+.image {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -11,107 +11,30 @@
   max-height: 100%;
   object-fit: cover;
 }
-.propertiescomponentproductT {
-  /* align-self: stretch; */
+.containerImage {
   flex: 1;
   z-index: 0;
-  /* position: relative; */
 }
-.productTitle,
-.propertiescomponentproductT {
+.categoryName,
+.containerImage {
   align-self: stretch;
   position: relative;
   text-align: center;
 }
-.brandName {
-  /* align-self: stretch;
-  position: relative; */
-  line-height: 20px;
-  font-weight: 300;
-  color: var(--typography-color-caption);
-}
-/* .idr150000,
-.productTitle {
-  position: relative;
-  font-weight: 500;
-} */
-.productTitle {
+.categoryName {
   align-self: stretch;
   font-size: var(--body-moderate-size);
   line-height: 24px;
+  color: var(--typography-color-default);
 }
-/* .idr150000 {
-  line-height: 20px;
-} */
-.propertiescomponentproductT2 {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-.idr100000 {
-  position: relative;
-  line-height: 20px;
-  font-weight: 500;
-  z-index: 0;
-}
-.strike {
-  position: absolute;
-  margin: 0 !important;
-  width: 100%;
-  top: 9.5px;
-  right: 0;
-  left: 0;
-  background-color: var(--fill-background-bg-inactive);
-  height: 1px;
-  z-index: 1;
-}
-.propertiescomponentproductT3 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  gap: var(--gap-5xs);
-  font-size: var(--caption-medium-medium-large-size);
-  color: var(--fill-background-bg-inactive);
-}
-.price,
-.propertiescomponentproductT1 {
-  align-self: stretch;
-  justify-content: flex-start;
-}
-.price {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--gap-xs);
-}
-/* .propertiescomponentproductT1 {
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-7xs);
-} */
-.componentproductTiles,
-.componentproductTilesParent {
+.container {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
 }
-.componentproductTiles {
+.container {
   flex: 1;
   height: 492px;
   flex-direction: column;
   gap: var(--gap-xs);
-}
-.componentproductTilesParent {
-  align-self: stretch;
-  flex-direction: row;
-  padding: 0 var(--padding-21xl);
-  gap: var(--gap-base);
-  text-align: left;
-  font-size: var(--title-bold-bold-small-size);
-  color: var(--typography-color-default);
-  font-family: var(--headline-medium-medium-moderate);
 }

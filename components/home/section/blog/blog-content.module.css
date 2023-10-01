@@ -1,4 +1,4 @@
-.image10Icon {
+.image {
   display: flex;
   /* position: relative; */
   border-radius: var(--br-5xs);
@@ -11,6 +11,7 @@
   position: relative;
   line-height: 20px;
   font-weight: 300;
+  color: var(--typography-color-body);
 }
 .fashionMuslimPilihan {
   align-self: stretch;
@@ -24,6 +25,7 @@
   position: relative;
   line-height: 20px;
   font-weight: 500;
+  color: var(--typography-color-mute);
 }
 .infoChild {
   position: relative;
@@ -42,7 +44,7 @@
   color: var(--fill-background-bg-inactive);
 }
 .info,
-.itIsA,
+.content,
 .title {
   align-self: stretch;
 }
@@ -54,7 +56,7 @@
   gap: var(--gap-9xs);
   z-index: 1;
 }
-.itIsA {
+.content {
   position: relative;
   font-size: var(--title-bold-bold-small-size);
   line-height: 20px;
@@ -86,14 +88,14 @@
   /* position: relative; */
   gap: var(--gap-5xl);
 }
-.image12Icon {
+.imageChidrend {
   position: relative;
   border-radius: var(--br-5xs);
   width: 132px;
   height: 88px;
   object-fit: cover;
 }
-.loremIpsumDolor {
+.titleChildren {
   align-self: stretch;
   position: relative;
   font-size: var(--body-moderate-size);
@@ -109,7 +111,7 @@
   justify-content: flex-start;
   gap: var(--gap-9xs);
 }
-.itIsA1 {
+.content {
   align-self: stretch;
   position: relative;
   font-size: var(--title-bold-bold-small-size);
@@ -130,7 +132,6 @@
   flex-direction: row;
   gap: var(--gap-5xl);
 }
-.blogContent,
 .blogSmall,
 .list {
   display: flex;
@@ -141,18 +142,4 @@
   flex: 1;
   flex-direction: column;
   gap: var(--gap-21xl);
-}
-.blogContent {
-  background-color: var(--fill-background-bg-mute-primary);
-  /* width: 1440px; */
-  height: 695px;
-  max-width: 100%;
-  flex-direction: row;
-  padding: var(--padding-5xl) var(--padding-21xl) var(--padding-45xl);
-  box-sizing: border-box;
-  gap: var(--gap-13xl);
-  text-align: left;
-  font-size: var(--caption-medium-medium-small-size);
-  color: var(--typography-color-caption);
-  font-family: var(--headline-medium-medium-moderate);
 }

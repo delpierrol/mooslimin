@@ -6,8 +6,6 @@ import ProductNewArrival from '../components/home/section/new-arrival/product-ne
 import ProductOutfit from '../components/home/section/outfit/product-outfit';
 import BlogContent from '../components/home/section/blog/blog-content';
 import ProductBestSeller from '../components/home/section/best-seller/product-best-seller';
-import Collection from '../components/home/section/collection/collection';
-import BrandTitle from '../components/home/section/brand/brand-title';
 import Brand from '../components/home/section/brand/brand';
 
 export async function getStaticProps() {
@@ -28,12 +26,11 @@ export default function Home({ allPostsData }) {
       </Head>
       <Banner />
       <ProductNewArrival />
-      <ProductOutfit />
-      <BlogContent />
       <ProductBestSeller />
-      <Collection />
-      <BrandTitle />
+      <ProductOutfit />
+      {/* <BrandTitle /> */}
       <Brand />
+      <BlogContent />
       {/* <section className={utilStyles.headingMd}>
         <p>[Your Self Introduction]</p>
         <p>
