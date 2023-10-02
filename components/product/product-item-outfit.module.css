@@ -1,0 +1,40 @@
+.image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.containerImage {
+  flex: 1;
+  z-index: 0;
+}
+.categoryName,
+.containerImage {
+  align-self: stretch;
+  position: relative;
+  text-align: center;
+}
+.categoryName {
+  align-self: stretch;
+  font-size: var(--body-moderate-size);
+  line-height: 24px;
+  color: var(--typography-color-default);
+}
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container {
+  flex: 1;
+  height: 492px;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}

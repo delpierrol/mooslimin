@@ -1,0 +1,20 @@
+.newlyAdded {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+}
+.badge {
+  margin: 12px !important;
+  position: absolute;
+  background-color: var(--typography-color-white);
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-5xs);
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  text-align: left;
+  font-size: var(--caption-regular-regular-small-size);
+  color: var(--typography-color-default);
+  font-family: var(--caption-regular-regular-small);
+}

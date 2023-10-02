@@ -1,0 +1,101 @@
+.image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.containerImage {
+  flex: 1;
+  z-index: 0;
+}
+.brandName,
+.productTitle,
+.containerImage {
+  align-self: stretch;
+  position: relative;
+}
+.brandName {
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-caption);
+}
+.productTitle {
+  font-size: var(--body-moderate-size);
+  line-height: 24px;
+  font-weight: 500;
+}
+.labelSpecialPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.price {
+  position: relative;
+  line-height: 20px;
+  font-weight: 500;
+  gap: var(--gap-5xs);
+  font-size: var(--caption-medium-medium-large-size);
+  color: var(--typography-color-inactive);
+  z-index: 0;
+}
+.strike {
+  position: absolute;
+  margin: 0 !important;
+  width: 100%;
+  top: 9.5px;
+  right: 0;
+  left: 0;
+  background-color: var(--typography-color-inactive);
+  height: 1px;
+  z-index: 1;
+}
+.labelPrice {
+  /* display: none; */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: var(--gap-5xs);
+  font-size: var(--caption-medium-medium-large-size);
+  color: var(--fill-background-bg-inactive);
+}
+.containerPrice,
+.containerProduct {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-xs);
+}
+.containerProduct {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-7xs);
+  z-index: 1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.container {
+  flex: 1;
+  height: 492px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: var(--gap-xs);
+  text-align: left;
+  font-size: var(--title-bold-bold-small-size);
+  color: var(--typography-color-default);
+  font-family: var(--headline-medium-medium-moderate);
+}

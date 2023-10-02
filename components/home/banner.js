@@ -3,10 +3,10 @@ import styles from './banner.module.css';
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
 import {
-  Col,
-  Row,
-  Container,
-  Carousel
+	Col,
+	Row,
+	Container,
+	Carousel
 } from "react-bootstrap";
 import React, { useState } from 'react';
 
@@ -17,21 +17,21 @@ export default function Banner() {
 		setIndex(selectedIndex);
 	};
 	return (
-		<Carousel activeIndex={index} onSelect={handleSelect}>
+		<Carousel className='pb-5' activeIndex={index} onSelect={handleSelect}>
 			<Carousel.Item>
-		        <img
-		          className="d-block w-100"
-		          src="/images/ditelaga.jpg"
-		          alt="First slide"
-		        />
-		      </Carousel.Item>
-		      <Carousel.Item>
-		        <img
-		          className="d-block w-100"
-		          src="/images/sidekick.jpg"
-		          alt="Second slide"
-		        />
-		      </Carousel.Item>
+				<img
+					className="d-block w-100"
+					src="/images/ditelaga.jpg"
+					alt="First slide"
+				/>
+			</Carousel.Item>
+			<Carousel.Item>
+				<img
+					className="d-block w-100"
+					src="/images/sidekick.jpg"
+					alt="Second slide"
+				/>
+			</Carousel.Item>
 		</Carousel>
 	);
 }

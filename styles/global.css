@@ -17,6 +17,7 @@ body {
   --caption-regular-regular-small-size: 12px;
   --caption-medium-medium-large-size: 14px;
   --body-small-size: 16px;
+  --title-bold-bold-small-size: 16px;
   --title-medium-medium-moderate-size: 18px;
   --headline-medium-medium-moderate-size: 40px;
   --headline-medium-medium-small-size: 28px;
@@ -25,6 +26,7 @@ body {
   /* Colors */
   --typography-color-white: #fff;
   --fill-secondary-secondary-light: #fdf5e9;
+  --fill-primary-primary-default: #486456;
   --typography-color-active: #486456;
   --typography-color-body: #333;
   --typography-color-mute: #ccc;
@@ -36,6 +38,7 @@ body {
   --typography-color-warning: #f2e4cc;
   --fill-tertiary-tertiary-default: #da4c4c;
   --typography-color-caption: #666;
+  
 
   /* Gaps */
   --gap-61xl: 80px;
@@ -86,15 +89,14 @@ body {
   line-height: 20px;
   font-weight: 500;
 }
-
 .navbar-mooslimin
 {
   font-size: var(--caption-medium-medium-large-size);
   color: var(--typography-color-body);
   font-family: var(--caption-regular-regular-small);
 }
-  .navbar-mooslimin .nav-link
-  {
+.navbar-mooslimin .nav-link
+{
     position: relative;
     line-height: 20px;
     font-weight: 300
@@ -109,4 +111,18 @@ body {
   {
     width:100%;
     transform: translate(0px, -5px);
+  }
+  .btn-outline-primary {
+    border-color: #486456;
+    border-radius: 100em;
+    color: #486456;
+  }
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus,
+.btn-outline-primary.active {
+    background-color: #486456;
+    border-color: #486456;
+    border-radius: 100em;
+    color: white;
   }

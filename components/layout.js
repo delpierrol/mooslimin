@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import {
   Nav,
@@ -13,6 +11,7 @@ import {
   Dropdown,
 } from "react-bootstrap";
 import React, { useState } from 'react';
+import Footer from './footer/footer';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
@@ -20,12 +19,12 @@ export const siteTitle = 'Next.js Sample Website';
 export default function Layout({ children, home }) {
 
   const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-      setShow(!show);
-  }
-  const hideDropdown = e => {
-      setShow(false);
-  }
+  // const showDropdown = (e) => {
+  //   setShow(!show);
+  // }
+  // const hideDropdown = e => {
+  //   setShow(false);
+  // }
 
   return (
     <div className={styles.container}>
@@ -37,7 +36,7 @@ export default function Layout({ children, home }) {
         />
         <meta
           property="og:image"
-          content="/images/logo.svg"/>
+          content="/images/logo.svg" />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
@@ -55,12 +54,12 @@ export default function Layout({ children, home }) {
             <Navbar.Collapse id="navbarCollapse">
               <Nav className="me-auto mb-2 mb-md-0">
                 <Nav.Link href="#home">Home</Nav.Link>
-                <NavDropdown title="Dropdown" 
-                  id="basic1" 
+                <NavDropdown title="Dropdown"
+                  id="basic1"
                   className="dropdown-megamenu"
                   show={show}
-                   onMouseEnter={showDropdown} 
-                   onMouseLeave={hideDropdown}
+                  onMouseEnter={() => setShow(true)}
+                  onMouseLeave={() => setShow(false)}
                 >
                   <Container className="eventsNav pt-0 mt-0">
                     <Row>
@@ -156,11 +155,12 @@ export default function Layout({ children, home }) {
         </Navbar>
       </header>
       <main>{children}</main>
-      {!home && (
+      {/* {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>
         </div>
-      )}
+      )} */}
+      <Footer />
     </div>
   );
 }

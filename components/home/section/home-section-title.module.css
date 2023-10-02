@@ -1,0 +1,21 @@
+.container {
+  text-align: left;
+  font-size: var(--headline-medium-medium-small-size);
+  color: var(--typography-color-default);
+  font-family: var(--headline-medium-medium-moderate);
+}
+.subtitle,
+.title {
+  position: relative;
+  line-height: 32px;
+  font-weight: 500;
+  display: flex;
+  align-items: flex-end;
+  width: 648px;
+}
+.subtitle {
+  font-size: var(--title-bold-bold-small-size);
+  line-height: 20px;
+  font-weight: 300;
+  color: var(--typography-color-body);
+}
