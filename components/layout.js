@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import Link from 'next/link';
 import {
   Nav,
   Navbar,
@@ -12,6 +11,7 @@ import {
 } from "react-bootstrap";
 import React, { useState } from 'react';
 import Footer from './footer/footer';
+import CustomMenuLogin from './header/custom-menu-login';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
@@ -19,12 +19,6 @@ export const siteTitle = 'Next.js Sample Website';
 export default function Layout({ children, home }) {
 
   const [show, setShow] = useState(false);
-  // const showDropdown = (e) => {
-  //   setShow(!show);
-  // }
-  // const hideDropdown = e => {
-  //   setShow(false);
-  // }
 
   return (
     <div className={styles.container}>
@@ -42,7 +36,7 @@ export default function Layout({ children, home }) {
       </Head>
       <header className="fixed-top">
         <div className="text-center bg-mooslimin-primary py-2">
-          <div className="container">
+          <div className="container txt-mooslimin-secondary">
             25% launching discount - For orders before 12PM - Diskon spesial  khusus launching (untuk pemesanan sebelum 12.00 WIB)
           </div>
         </div>
@@ -53,7 +47,7 @@ export default function Layout({ children, home }) {
             </Navbar.Brand>
             <Navbar.Collapse id="navbarCollapse">
               <Nav className="me-auto mb-2 mb-md-0">
-                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="new-arrivals">Terbaru</Nav.Link>
                 <NavDropdown title="Dropdown"
                   id="basic1"
                   className="dropdown-megamenu"
@@ -144,7 +138,7 @@ export default function Layout({ children, home }) {
             <div className={styles.componentnavigationheaderMeChild + " mx-4"} />
             <div className={styles.rightIcon}>
               <div className={styles.div}>0</div>
-              <img className={styles.personIcon} alt="" src="/images/component/navigation/person.svg" />
+              <CustomMenuLogin />
               <img
                 className={styles.localMallIcon}
                 alt=""

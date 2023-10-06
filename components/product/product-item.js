@@ -1,10 +1,11 @@
+import Image from "next/image";
 import Badge from "../badge/badge";
 import styles from "./product-item.module.css";
-const ProductItem = ({ image }) => {
+const ProductItem = ({ image, alt }) => {
   return (
     <div className={styles.container}>
       <div className={styles.containerImage}>
-        <img className={styles.image} alt="" src={image} />
+        <Image layout="fill" objectFit="cover" alt={alt} src={image} />
       </div>
       <div className={styles.containerProduct}>
         <div className={styles.brandName}>Brand name</div>

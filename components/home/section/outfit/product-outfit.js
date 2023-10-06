@@ -30,7 +30,7 @@ const ProductOutfit = () => {
         onClick={{}}
       />
       <Container className="pb-5">
-        <Row>
+        <Row className="gy-5">
           {outfits.map((outfit) => (
             <Col xs="6" md="3">
               <ProductItemOutfit image={outfit.image} title={outfit.category} />
@@ -38,12 +38,6 @@ const ProductOutfit = () => {
           ))}
         </Row>
       </Container>
-      {/* <div className={styles.componentproductTilesParent}>
-        <ProductItemOutfit image={'/images/product/image3@2x.png'} title={'Daily wear Baju Sehari-hari'} />
-        <ProductItemOutfit image={'/images/product/image4@2x.png'} title={'Work wear Baju Kerja'} />
-        <ProductItemOutfit image={'/images/product/image5@2x.png'} title={'Sports wear Baju Olah Raga'} />
-        <ProductItemOutfit image={'/images/product/image6@2x.png'} title={'Baju Kajian'} />
-      </div> */}
     </div>
   );
 };

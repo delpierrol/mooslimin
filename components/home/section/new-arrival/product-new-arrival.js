@@ -8,7 +8,7 @@ export default function ProductNewArrival() {
     <div>
       <HomeSectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
       <Container className="pb-5">
-        <Row>
+        <Row className="gy-5">
           {images.map((image) => (
             <Col xs="6" md="3"><ProductItem image={image} /></Col>
           ))}

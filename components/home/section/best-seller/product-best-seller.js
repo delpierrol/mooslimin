@@ -14,7 +14,7 @@ export default function ProductBestSeller() {
     <div>
       <SectionTitle title={'Mooslimin Best Sellers Yang Laris Manis di Mooslimin'} subtitle={'The outfit everyone is buying. Favorit outfit setiap Mooslimin'} />
       <Container className="pb-5">
-        <Row>{rows}</Row>
+        <Row className="gy-5">{rows}</Row>
       </Container>
     </div>
   );
