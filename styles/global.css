@@ -112,6 +112,19 @@ body {
     width:100%;
     transform: translate(0px, -5px);
   }
+  .btn-primary {
+    background-color: var(--fill-primary-primary-default) !important;
+    border-radius: 100em !important;
+  }
+  .btn-primary:hover,
+.btn-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--fill-primary-primary-default) !important;
+    /* border-color: var(--fill-primary-primary-default) !important; */
+    border-radius: 100em !important;
+    color: white !important;
+  }
+
   .btn-outline-primary {
     border-color: var(--fill-primary-primary-default) !important;
     border-radius: 100em !important;

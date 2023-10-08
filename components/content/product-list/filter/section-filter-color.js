@@ -1,5 +1,6 @@
 'use client'
 
+"use client"
 import { Accordion, Col, Form, Row } from "react-bootstrap";
 import styles from "../filter/filter.module.css"
 import { useState } from "react";

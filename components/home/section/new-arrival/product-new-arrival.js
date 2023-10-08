@@ -3,14 +3,60 @@ import ProductItem from "../../../product/product-item";
 import HomeSectionTitle from "../home-section-title";
 
 export default function ProductNewArrival() {
-  const images = ["/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png"];
+  const products = [
+    {
+      id: 1,
+      title: 'Product 1',
+      price: 100000,
+      specialPrice: 80000,
+      image: "/images/product/image@2x.png",
+      brand: {
+        id: 1,
+        name: "Brand 1"
+      }
+    },
+    {
+      id: 2,
+      title: 'Product 2',
+      price: 100000,
+      specialPrice: 80000,
+      image: "/images/product/image@2x.png",
+      brand: {
+        id: 1,
+        name: "Brand 1"
+      }
+    },
+    {
+      id: 3,
+      title: 'Product 3',
+      price: 100000,
+      specialPrice: 80000,
+      image: "/images/product/image@2x.png",
+      brand: {
+        id: 1,
+        name: "Brand 1"
+      }
+    },
+    {
+      id: 4,
+      title: 'Product 4',
+      price: 100000,
+      specialPrice: 80000,
+      image: "/images/product/image@2x.png",
+      brand: {
+        id: 1,
+        name: "Brand 1"
+      }
+    },
+  ];
+
   return (
     <div>
       <HomeSectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
       <Container className="pb-5">
         <Row className="gy-5">
-          {images.map((image) => (
-            <Col xs="6" md="3"><ProductItem image={image} /></Col>
+          {products.map((item) => (
+            <Col xs="6" md="3"><ProductItem product={item} /></Col>
           ))}
         </Row>
       </Container>

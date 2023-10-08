@@ -6,15 +6,19 @@ import SectionFilterType from "./section-filter-type";
 import SectionFilterSize from "./section-filter-size";
 import SectionFilterColor from "./section-filter-color";
 import SectionFilterPrice from "./section-filter-price";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSliders } from "@fortawesome/free-solid-svg-icons";
 
 export default function Filter() {
     var brands = [{ id: 1, name: "Brand 1" }, { id: 1, name: "Brand 2" }];
     var categories = [{ id: 1, name: "Category 1", total: 10 }];
     var sizes = [{ id: 1, name: "22" }, { id: 2, name: "23" }, { id: 3, name: "24" }, { id: 4, name: "25" }];
     return (
-        <Row>
-            <div>
-                <img src="" width="32" />
+        <div>
+            <div className="d-flex align-items-center">
+                <div style={{ width: "15px", marginRight: "5px" }}>
+                    <FontAwesomeIcon icon={faSliders} />
+                </div>
                 <span>Filter</span>
             </div>
             <SectionFilterSale />
@@ -24,6 +28,6 @@ export default function Filter() {
             <SectionFilterSize datas={sizes} />
             <SectionFilterColor datas={[]} />
             <SectionFilterPrice />
-        </Row>
+        </div>
     );
 }
