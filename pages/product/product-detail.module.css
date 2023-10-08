@@ -8,11 +8,10 @@
 .description {
   margin-bottom: 32px;
 }
-.roundSize {
-  border-radius: 100%;
-  height: 30px;
-  width: 30px;
-  padding: 4px;
+
+label.btn:not(.btn-flat) { 
+  background-color: #35DDE0;
+  color: #333;
 }
 
 .round {

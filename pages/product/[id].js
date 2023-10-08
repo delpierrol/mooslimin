@@ -1,6 +1,6 @@
 import Layout from '../../components/layout';
 import Head from 'next/head';
-import { Breadcrumb, Container, Row, Col, Image, Button, Form } from "react-bootstrap";
+import { Breadcrumb, Container, Row, Col, Image, Button, Form, ButtonGroup, ToggleButton, Accordion } from "react-bootstrap";
 import styles from './product-detail.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShare, faShareNodes } from '@fortawesome/free-solid-svg-icons';
@@ -92,20 +92,36 @@ export default function ProductDetail() {
               <h2 className={styles.productName}>Product Name</h2>
               <h3 className={styles.price}>IDR 10000</h3>
               <div className={styles.description}>Description</div>
-              {/* <div>
-                <div>Pilih Ukuran: </div>
-                <div className={styles.roundSize} style={{ border: "1px solid #000" }}>
-                  <label for="radio">S</label>
-                  <input type="radio" />
-                </div>
-              </div> */}
-              <div>
-                <div>Pilih Warna: </div>
-                <div className={styles.round} style={{ border: "1px solid #000" }}>
-                  <label for="radio" style={{ backgroundColor: "red" }}></label>
-                  <input type="radio" />
-                </div>
+              <div className='mb-2'>
+                <div className='mb-2'>Pilih Ukuran: </div>
+                <Container>
+                  <div className='inline row gap-3'>
+                    <label className='text-center py-2' style={{ cursor: "pointer", border: "1px solid var(--typography-color-active)", borderRadius: "50px", width: "100px", color: "var(--typography-color-body)" }}>
+                      <input type="radio" name="s" value="s" hidden />
+                      S</label>
+                    <label className='text-center py-2' style={{ cursor: "pointer", border: "1px solid var(--typography-color-mute)", borderRadius: "50px", width: "100px", color: "var(--typography-color-body)" }}>
+                      <input type="radio" name="m" value="m" hidden />
+                      M</label>
+                  </div>
+                </Container>
               </div>
+              <hr />
+              <div className='mb-2'>
+                <div className='mb-2'>Pilih Warna: </div>
+                <Container>
+                  <div className='inline row gap-3'>
+                    <div className={styles.round} style={{ border: "1px solid #000" }}>
+                      <label for="radio" style={{ backgroundColor: "red" }}></label>
+                      <input type="radio" />
+                    </div>
+                    <div className={styles.round} style={{ border: "" }}>
+                      <label for="radio" style={{ backgroundColor: "blue" }}></label>
+                      <input type="radio" />
+                    </div>
+                  </div>
+                </Container>
+              </div>
+              <hr />
               <div>
                 <Row>
                   <Col md="6">
@@ -122,15 +138,27 @@ export default function ProductDetail() {
                   </Col>
                 </Row>
               </div>
-              <Button className='btn-primary w-100 my-5' size="lg">MASUKKAN KERANJANG +</Button>
-              <div className='text-center'>
+              <hr />
+              <Button className='btn-primary w-100 my-2' size="lg">MASUKKAN KERANJANG +</Button>
+              <div className='text-center mb-5'>
                 <a type='button'>
                   <div style={{ padding: "16px" }}><FontAwesomeIcon icon={faShareNodes} /></div>
                   <span>Sebarkan</span>
                 </a>
               </div>
+              <Accordion defaultActiveKey="detail">
+                <Accordion.Item>
+                  <Accordion.Header>Detail</Accordion.Header>
+                  <Accordion.Body className="p-0 align-items-center">
+                    <div className='my-3'>
+                      <div className='mb-3'>Material</div>
+                      <div className='mb-2'>- Nama Bahan</div>
+                      <div className='mb-2'>- Jenis Bahan</div>
+                    </div>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
             </div>
-
           </Col>
         </Row>
         <div className='py-5'>
@@ -150,7 +178,6 @@ export default function ProductDetail() {
           </Row>
         </div>
       </Container>
-
     </Layout>
   );
 }
