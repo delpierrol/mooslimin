@@ -67,8 +67,8 @@ export default function ProductDetail() {
           <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
           <Breadcrumb.Item active>Produk Detail</Breadcrumb.Item>
         </Breadcrumb>
-        <Row className='pb-5'>
-          <Col md="6" className='px-5'>
+        <Row className='pb-5 g-5'>
+          <Col lg="6" sm="8">
             <div className='d-flex align-items-center'>
               <div>
                 {
@@ -86,7 +86,7 @@ export default function ProductDetail() {
               </div>
             </div>
           </Col>
-          <Col md="6">
+          <Col lg="6" sm="4">
             <div>
               <div className='pb-2'>Brand Name</div>
               <h2 className={styles.productName}>Product Name</h2>
@@ -132,7 +132,7 @@ export default function ProductDetail() {
                       <div className='pe-3'>Stock: {"0"}</div>
                       <div className={styles.containerQty}>
                         <Button className={styles.btnQty}>-</Button>
-                        <Form.Control type="text" placeholder="0" />
+                        <Form.Control type="text" placeholder="0" className={styles.formControl} />
                         <Button className={styles.btnQty}>+</Button>
                       </div></div>
                   </Col>

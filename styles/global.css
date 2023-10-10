@@ -150,6 +150,7 @@ body {
     padding: 0px;
     padding-top: 8px;
     padding-bottom: 8px;
+    box-shadow:none !important;
   }
   /* .accordion-button:not(.collapsed) {
     color: #212529;
@@ -164,6 +165,9 @@ body {
   .accordion-body {
     border-bottom: 1px !important;
   }
+  .form-control:focus {
+    box-shadow:none !important;
+ }
   
 
   

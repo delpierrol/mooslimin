@@ -6,7 +6,7 @@ export default function ProductList() {
     const products = [
         {
             id: 1,
-            title: 'Product 1',
+            title: 'Product 1 ksjfldsjlk jdsfjdslkfjdlks fdslkfjdslkjfsdl fkldsjfkljds sdfdsfds dsfjldskfjl dsflsdjl',
             price: 100000,
             specialPrice: 80000,
             image: "/images/product/image@2x.png",

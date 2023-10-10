@@ -12,13 +12,17 @@ import {
 import React, { useState } from 'react';
 import Footer from './footer/footer';
 import CustomMenuLogin from './header/custom-menu-login';
+import { useRouter } from 'next/router';
 
 const name = 'Errol Widhavian';
 export const siteTitle = 'Next.js Sample Website';
 
 export default function Layout({ children, home }) {
+  const router = useRouter();
 
   const [show, setShow] = useState(false);
+
+  const [showBrand, setShowBrand] = useState(false);
 
   return (
     <div className={styles.container}>
@@ -48,10 +52,11 @@ export default function Layout({ children, home }) {
             <Navbar.Collapse id="navbarCollapse">
               <Nav className="me-auto mb-2 mb-md-0">
                 <Nav.Link href="new-arrivals">Terbaru</Nav.Link>
-                <NavDropdown title="Dropdown"
+                <NavDropdown title="Stelan Pria"
                   id="basic1"
                   className="dropdown-megamenu"
                   show={show}
+                  onClick={() => router.push('/outfit')}
                   onMouseEnter={() => setShow(true)}
                   onMouseLeave={() => setShow(false)}
                 >
@@ -119,6 +124,30 @@ export default function Layout({ children, home }) {
                         <Dropdown.Item>
                           <Nav.Link href="#home">Home</Nav.Link>
                         </Dropdown.Item>
+                      </Col>
+                    </Row>
+                  </Container>
+                </NavDropdown>
+                <NavDropdown title="Brand"
+                  id="basic1"
+                  className="dropdown-megamenu"
+                  show={showBrand}
+                  onClick={() => router.push('/brands')}
+                  onMouseEnter={() => setShowBrand(true)}
+                  onMouseLeave={() => setShowBrand(false)}
+                >
+                  <Container className="eventsNav pt-0 mt-0">
+                    <Row>
+                      <Col xs="12" md="4" className="text-left">
+                        <Dropdown.Header>Catering</Dropdown.Header>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Item>
+                          <Nav.Link href="#home">Home</Nav.Link>
+                        </Dropdown.Item>
+                        <Dropdown.Divider />
+
                       </Col>
                     </Row>
                   </Container>

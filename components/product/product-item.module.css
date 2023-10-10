@@ -17,6 +17,8 @@
   font-size: var(--body-moderate-size);
   line-height: 24px;
   font-weight: 500;
+  overflow: hidden;
+    height: 50px;
 }
 .labelSpecialPrice {
   display: flex;

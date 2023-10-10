@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Badge from "../badge/badge";
 import styles from "./product-item.module.css";
+import { NumericFormat } from "react-number-format";
 
 export default function ProductItem({ product }) {
   console.log(product);
@@ -11,15 +12,16 @@ export default function ProductItem({ product }) {
           <Image layout="fill" objectFit="cover" alt="" src={product.image} />
         </div>
         <div className={styles.containerProduct}>
-          <div className={styles.brandName}>{product.brand.name}</div>
-          <div className={styles.productTitle}>{product.title}</div>
+          <text className={styles.brandName}>{product.brand.name}</text>
+          <text className={styles.productTitle}>{product.title}</text>
           <div className={styles.labelSpecialPrice}>
-            <div>{product.specialPrice}</div>
+            <text>{product.specialPrice}</text>
           </div>
           <div className={styles.labelPrice}>
-            <div className={styles.price}>{product.price}</div>
+            <text className={styles.price}>{product.price}</text>
             <div className={styles.strike} />
           </div>
+          <text>Terjual 10</text>
         </div>
         <Badge />
       </div>

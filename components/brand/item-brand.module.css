@@ -1,0 +1,117 @@
+.imageBrand {
+    position: relative;
+    width: 434.67px;
+    height: 217px;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .brandName,
+  .brandRating,
+  .brandReview {
+    position: relative;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  .starIcon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-9xs);
+  }
+  .dot {
+    position: relative;
+    border-radius: 50%;
+    background-color: var(--typography-color-inactive);
+    width: 3px;
+    height: 3px;
+  }
+  .info,
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .info {
+    flex-direction: row;
+    gap: var(--gap-5xs);
+    font-size: var(--caption-medium-medium-small-size);
+    color: var(--typography-color-body);
+  }
+  .text {
+    align-self: stretch;
+    flex-direction: column;
+    gap: var(--gap-9xs);
+    z-index: 0;
+  }
+  .headerChild {
+    position: absolute;
+    margin: 0 !important;
+    top: -42px;
+    left: calc(50% - 42px);
+    border-radius: 50%;
+    background-color: var(--fill-primary-primary-default);
+    border: 2px solid var(--typography-color-white);
+    box-sizing: border-box;
+    width: 84px;
+    height: 84px;
+    z-index: 1;
+  }
+  .header {
+    align-self: stretch;
+    padding: var(--padding-37xl) var(--padding-base) var(--padding-5xl);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: var(--gap-base);
+    z-index: 1;
+  }
+  .badge,
+  .card,
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+  .badge {
+    margin: 0 !important;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--typography-color-white);
+    padding: var(--padding-5xs);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: var(--caption-medium-medium-small-size);
+  }
+  .card {
+    flex: 1;
+    border-radius: 18px;
+    border: 1px solid var(--fill-background-bg-mute-primary);
+    overflow: hidden;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .bg {
+    align-self: stretch;
+    position: relative;
+    background-color: var(--fill-secondary-secondary-light);
+  }
+  .brand {
+    max-width: 100%;
+    box-sizing: border-box;
+    gap: var(--gap-9xl);
+    text-align: left;
+    font-size: var(--title-bold-bold-small-size);
+    color: var(--typography-color-default);
+    font-family: var(--headline-medium-medium-moderate);
+  }
+  
