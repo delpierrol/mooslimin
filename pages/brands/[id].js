@@ -1,9 +1,8 @@
 import Head from "next/head";
 import Layout from "../../components/layout";
 import { Breadcrumb, Container, Image } from "react-bootstrap";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faCircleDot, faDotCircle, faStar } from "@fortawesome/free-solid-svg-icons";
 import ProductList from "../../components/content/product-list/product-list";
+import { Grade, Lens } from "@mui/icons-material";
 
 export default function BrandDetail() {
     return (
@@ -50,10 +49,11 @@ export default function BrandDetail() {
                 <h2>Deryansha</h2>
                 <div>
                     <div className="d-inline align-items-center">
-                        <FontAwesomeIcon icon={faStar} width={14} height={14} color="var(--fill-secondary-secondary-default)" />
+                        <Grade />
                         <label className="px-2 align-middle" style={{ fontSize: "18px" }}>0.0</label>
                     </div>
-                    <FontAwesomeIcon className="mx-2" icon={faCircle} width={5} height={5} color="var(--typography-color-inactive)" />
+                    <Lens />
+                    {/* <Circle className="mx-2"  width={5} height={5} color="var(--typography-color-inactive)" /> */}
                     <label className="px-2 align-middle" style={{ fontSize: "18px" }}>0 Ulasan</label>
                 </div>
             </Container>

@@ -1,8 +1,15 @@
-import { Col, Container, Form, Pagination, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import ProductItem from "../../product/product-item";
 import Filter from "./filter/filter";
+import { FormControl, MenuItem, Select, Pagination, Grid } from "@mui/material";
+import { useState } from "react";
 
 export default function ProductList() {
+    const [sort, setSort] = useState(1);
+
+    const handleChange = (event) => {
+        setSort(event.target.value);
+    };
     const products = [
         {
             id: 1,
@@ -61,49 +68,44 @@ export default function ProductList() {
         }
     ];
 
-    let active = 2;
-    let items = [];
-    for (let number = 1; number <= 5; number++) {
-        items.push(
-            <Pagination.Item key={number} active={number === active}>
-                {number}
-            </Pagination.Item>,
-        );
-    }
-
     return (
         <Container>
-            <Row className="gx-5 py-5">
-                <Col md="3">
+            <Grid container spacing={5} className="py-5">
+                <Grid item md="3">
                     <Filter />
-                </Col>
-                <Col md="9">
+                </Grid>
+                <Grid item md="9">
                     <div>
                         <div className="pb-3 d-flex align-items-center justify-content-end">
                             <div>Urutkan {"10"} produk berdasarkan:</div>
-                            <Form.Select aria-label="sort" class="border-none p-2" style={{ border: "none" }}>
-                                <option value="1">Rekomendasi</option>
-                                <option value="2">Terbaru</option>
-                                <option value="3">Terlaris</option>
-                                <option value="4">Harga Rendah ke Tinggi</option>
-                                <option value="5">Harga Tinggi ke Rendah</option>
-                            </Form.Select>
+                            <FormControl sx={{ m: 1, minWidth: 40 }} variant="standard" size="small" style={{ margin: 0 }} >
+                                <Select
+                                    autoWidth
+                                    disableUnderline
+                                    id="select-sort"
+                                    value={sort}
+                                    onChange={handleChange}
+                                    className="px-2"
+                                >
+                                    <MenuItem value="1">Rekomendasi</MenuItem>
+                                    <MenuItem value="2">Terbaru</MenuItem>
+                                    <MenuItem value="3">Terlaris</MenuItem>
+                                    <MenuItem value="4">Harga Rendah ke Tinggi</MenuItem>
+                                    <MenuItem value="5">Harga Tinggi ke Rendah</MenuItem>
+                                </Select>
+                            </FormControl>
                         </div>
-                        <Row className="gy-5">
+                        <Grid container spacing={3} className="gy-5">
                             {products.map((item) => (
-                                <Col xs="6" md="4"><ProductItem product={item} /></Col>
+                                <Grid item xs="6" md="4"><ProductItem product={item} /></Grid>
                             ))}
-                        </Row>
-                        <Row>
-                            <Pagination className="pt-5 d-flex justify-content-center">
-                                {items}
-                            </Pagination>
-                        </Row>
-
-
+                        </Grid>
+                        <Grid>
+                            <Pagination className="pt-5 d-flex justify-content-center" count={10} />
+                        </Grid>
                     </div>
-                </Col>
-            </Row>
+                </Grid>
+            </Grid>
         </Container>
     );
 }

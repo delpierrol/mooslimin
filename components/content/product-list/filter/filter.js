@@ -6,8 +6,7 @@ import SectionFilterType from "./section-filter-type";
 import SectionFilterSize from "./section-filter-size";
 import SectionFilterColor from "./section-filter-color";
 import SectionFilterPrice from "./section-filter-price";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSliders } from "@fortawesome/free-solid-svg-icons";
+import { FilterList } from "@mui/icons-material";
 
 export default function Filter() {
     var brands = [{ id: 1, name: "Brand 1" }, { id: 1, name: "Brand 2" }];
@@ -16,9 +15,7 @@ export default function Filter() {
     return (
         <div>
             <div className="d-flex align-items-center">
-                <div style={{ width: "15px", marginRight: "5px" }}>
-                    <FontAwesomeIcon icon={faSliders} />
-                </div>
+                <FilterList className="me-2" />
                 <span>Filter</span>
             </div>
             <SectionFilterSale />

@@ -3,14 +3,20 @@ import styles from "./brand.module.css";
 import ItemBrand from "../../../brand/item-brand";
 const Brand = () => {
 
-  const rows = [];
-  for (let i = 0; i < 3; i++) {
-    rows.push(
-      <Col md="4">
-        <ItemBrand />
-      </Col>
-    );
-  }
+  const brands = [
+    {
+      id: 1,
+      name: "Brand 1",
+      rating: 4.0,
+      reviews: []
+    },
+    {
+      id: 2,
+      name: "Brand 2",
+      rating: 4.0,
+      reviews: []
+    }
+  ];
 
 
   return (
@@ -26,7 +32,9 @@ const Brand = () => {
         </div>
       </div>
       <Row>
-        {rows}
+        {brands.map((brand) => <Col md="4">
+          <ItemBrand brand={brand} />
+        </Col>)}
       </Row>
     </Container>
   );

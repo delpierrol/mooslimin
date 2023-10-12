@@ -1,10 +1,9 @@
 import Layout from '../../components/layout';
 import Head from 'next/head';
-import { Breadcrumb, Container, Row, Col, Image, Button, Form, ButtonGroup, ToggleButton, Accordion } from "react-bootstrap";
+import { Breadcrumb, Container, Row, Col, Image, Button, Form, Accordion } from "react-bootstrap";
 import styles from './product-detail.module.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShare, faShareNodes } from '@fortawesome/free-solid-svg-icons';
 import ProductItem from '../../components/product/product-item';
+import { Share } from '@mui/icons-material';
 
 const images = ["/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png", "/images/product/image@2x.png"];
 
@@ -142,7 +141,9 @@ export default function ProductDetail() {
               <Button className='btn-primary w-100 my-2' size="lg">MASUKKAN KERANJANG +</Button>
               <div className='text-center mb-5'>
                 <a type='button'>
-                  <div style={{ padding: "16px" }}><FontAwesomeIcon icon={faShareNodes} /></div>
+                  <div style={{ padding: "16px" }}>
+                    <Share />
+                  </div>
                   <span>Sebarkan</span>
                 </a>
               </div>

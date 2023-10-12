@@ -3,6 +3,8 @@ import Layout from "../../components/layout";
 import { Breadcrumb, Carousel, CarouselItem, Col, Container, Row } from "react-bootstrap";
 import ProductList from "../../components/content/product-list/product-list";
 import ProductItemOutfit from "../../components/product/product-item-outfit";
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
+import 'react-horizontal-scrolling-menu/dist/styles.css';
 
 const outfits = [
     {
@@ -52,22 +54,21 @@ export default function Outfit() {
 
     function BannerCategory() {
         return (
-            <Carousel>
-                {outfits.map((outfit) => (
-                    <CarouselItem className="slide">
-                        <ProductItemOutfit image={outfit.image} title={outfit.category} />
-                    </CarouselItem>
-                ))}
-            </Carousel>
+            <ScrollMenu>
+                <div className="d-flex pb-5">
+                    {outfits.map((outfit) => (
+                        <div className="px-2" style={{ width: "250px" }}><ProductItemOutfit image={outfit.image} title={outfit.category} /></div>
+                    ))}
+                </div>
+            </ScrollMenu>
         )
-
-        return (
-            <Row className="gy-5 pb-5 ">
-                {outfits.map((outfit) => (
-                    <ProductItemOutfit image={outfit.image} title={outfit.category} />
-                ))}
-            </Row>
-        );
+        // return (
+        //     <Row className="gy-5 pb-5">
+        //         {outfits.map((outfit) => (
+        //             <ProductItemOutfit image={outfit.image} title={outfit.category} />
+        //         ))}
+        //     </Row>
+        // );
     }
 }
 
