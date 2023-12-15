@@ -5,7 +5,7 @@ body {
   line-height: normal;
   font-family: var(--caption-regular-regular-small) !important;
   font-size: var(--caption-medium-medium-large-size) !important;
-  color: var(--typography-color-warning) !important;
+  color: var(--typography-color-default) !important;
     margin-top: 6rem !important;
 }
 :root {
@@ -112,17 +112,71 @@ body {
     width:100%;
     transform: translate(0px, -5px);
   }
+  .btn-primary {
+    background-color: var(--fill-primary-primary-default) !important;
+    border-radius: 100em !important;
+  }
+  .btn-primary:hover,
+.btn-primary:focus,
+.btn-outline-primary:active {
+    background-color: var(--fill-primary-primary-default) !important;
+    /* border-color: var(--fill-primary-primary-default) !important; */
+    border-radius: 100em !important;
+    color: white !important;
+  }
+
   .btn-outline-primary {
-    border-color: #486456;
-    border-radius: 100em;
-    color: #486456;
+    border-color: var(--fill-primary-primary-default) !important;
+    border-radius: 100em !important;
+    color: var(--fill-primary-primary-default) !important;
   }
 .btn-outline-primary:hover,
-.btn-outline-primary:active,
 .btn-outline-primary:focus,
-.btn-outline-primary.active {
-    background-color: #486456;
-    border-color: #486456;
-    border-radius: 100em;
-    color: white;
+.btn-outline-primary:active {
+    background-color: var(--fill-primary-primary-default) !important;
+    border-color: var(--fill-primary-primary-default) !important;
+    border-radius: 100em !important;
+    color: white !important;
   }
+  a:link, a:hover, a:active, a:visited {
+    color: var(--typography-color-default) !important;
+    text-decoration: none;
+  }
+  .accordion,
+  .accordion-button {
+    --bs-accordion-border-width: none; 
+    border-radius: 0px;
+    background-color: transparent !important;
+    padding: 0px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow:none !important;
+  }
+  /* .accordion-button:not(.collapsed) {
+    color: #212529;
+    border: none;
+  } */
+  .accordion-button:visited, 
+  .accordion-button:hover, 
+  .accordion-button:active{
+    border: none;
+    box-shadow: 0px !important;
+  }
+  .accordion-body {
+    border-bottom: 1px !important;
+  }
+  .form-control:focus {
+    box-shadow:none !important;
+ }
+ .react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.react-horizontal-scrolling-menu--scroll-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+  
+
+  

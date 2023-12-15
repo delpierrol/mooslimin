@@ -1,36 +1,22 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styles from "./brand.module.css";
+import ItemBrand from "../../../brand/item-brand";
 const Brand = () => {
 
-  const rows = [];
-  for (let i = 0; i < 3; i++) {
-    rows.push(
-      <Col md="4">
-        <div className={styles.brand}>
-          <div className={styles.card}>
-            <img className={styles.imageBrand} alt="" src="/banner@2x.png" />
-            <div className={styles.header}>
-              <div className={styles.text}>
-                <div className={styles.brandName}>Mabrook.idn</div>
-                <div className={styles.info}>
-                  <div className={styles.icon}>
-                    <img className={styles.starIcon} alt="" src="/star.svg" />
-                    <div className={styles.brandRating}>4.50</div>
-                  </div>
-                  <div className={styles.dot} />
-                  <div className={styles.brandReview}>14 Reviews</div>
-                </div>
-              </div>
-              <div className={styles.headerChild} />
-            </div>
-            <div className={styles.badge}>
-              <div className={styles.mabrookidn}>NEW</div>
-            </div>
-          </div>
-        </div>
-      </Col>
-    );
-  }
+  const brands = [
+    {
+      id: 1,
+      name: "Brand 1",
+      rating: 4.0,
+      reviews: []
+    },
+    {
+      id: 2,
+      name: "Brand 2",
+      rating: 4.0,
+      reviews: []
+    }
+  ];
 
 
   return (
@@ -46,7 +32,9 @@ const Brand = () => {
         </div>
       </div>
       <Row>
-        {rows}
+        {brands.map((brand) => <Col md="4">
+          <ItemBrand brand={brand} />
+        </Col>)}
       </Row>
     </Container>
   );

@@ -18,25 +18,16 @@
 .info,
 .text {
   display: flex;
-  /* align-items: flex-start;
-  justify-content: flex-start; */
   font-size: 16px;
+  color: var(--typography-color-warning);
 }
 .info {
-  flex-direction: row;
   align-items: center;
   gap: var(--gap-base);
 }
-
 .infoBar {
-  align-self: stretch;
   background-color: var(--fill-primary-primary-default);
-  display: flex;
-  flex-direction: row;
   padding: var(--padding-5xl) 0;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-161xl);
 }
 .dailyWearBaju,
 .outfitfesyen {
@@ -80,10 +71,10 @@
   flex: 1;
   gap: var(--gap-21xl);
 }
-.tiktokIcon {
+.iconSocmed {
   position: relative;
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -101,150 +92,20 @@
   align-items: flex-start;
   justify-content: flex-end;
 }
-.beTheFirst,
-.subscribeToOur {
+.tnc {
   align-self: stretch;
-  position: relative;
-  line-height: 20px;
-}
-.subscribeToOur {
-  font-size: var(--caption-medium-medium-large-size);
-  font-weight: 500;
-  z-index: 0;
-}
-.beTheFirst {
-  font-weight: 300;
-  color: var(--typography-color-body);
-  z-index: 1;
-}
-.icon16 {
-  position: relative;
-  width: 16px;
-  height: 16px;
-  opacity: 0;
-}
-.componentinputField {
-  align-self: stretch;
-  border-radius: var(--br-81xl);
-  border: 1px solid var(--fill-background-bg-mute-secondary);
-  box-sizing: border-box;
-  height: 36px;
   display: flex;
   flex-direction: row;
-  padding: var(--padding-xs) var(--padding-base);
   align-items: center;
   justify-content: flex-start;
   gap: var(--gap-xs);
   z-index: 2;
   text-align: center;
-  color: var(--fill-background-bg-inactive);
 }
-.emailIcon,
-.submit {
-  position: absolute;
-  margin: 0 !important;
-}
-.emailIcon {
-  top: 94px;
-  left: 16px;
-  width: 16px;
-  height: 16px;
-  overflow: hidden;
-  flex-shrink: 0;
-  z-index: 3;
-}
-.submit {
-  top: 92px;
-  left: 272px;
+.tncText {
   line-height: 20px;
-  font-weight: 500;
-  color: var(--fill-primary-primary-default);
-  text-align: center;
-  z-index: 4;
-}
-.list5 {
-  align-self: stretch;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  gap: var(--gap-xs);
-  font-size: var(--caption-medium-medium-small-size);
-}
-.content,
-.list5,
-.lists1,
-.text9 {
-  display: flex;
-  justify-content: flex-start;
-}
-.lists1 {
-  width: 334px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: var(--gap-21xl);
-}
-.content,
-.text9 {
-  flex-direction: row;
-}
-.content {
-  align-self: stretch;
-  align-items: flex-start;
-  gap: var(--gap-5xs);
-}
-.text9 {
-  flex: 1;
-  align-items: flex-end;
-  gap: var(--gap-base);
-}
-.logoIcon {
-  position: relative;
-  width: 64px;
-  height: 19.29px;
-}
-.logopayment,
-.mandiri {
-  height: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-}
-.logopayment {
-  border-radius: var(--br-9xs);
-  border: 1px solid var(--typography-color-mute);
-  box-sizing: border-box;
-  width: 72px;
-  height: 44px;
-  align-items: center;
-  justify-content: center;
-}
-.logoIcon1 {
-  position: relative;
-  width: 62px;
-  height: 14.73px;
-}
-.logos1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-.gopayIcon {
-  position: relative;
-  width: 62px;
-  height: 16.72px;
-}
-.logos,
-.textnewgopay {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.logos {
-  justify-content: flex-start;
-  gap: var(--gap-xs);
+  font-weight: 300;
+  color: var(--typography-color-default);
 }
 .copyright {
   flex: 1;
@@ -253,38 +114,11 @@
   font-weight: 300;
   text-align: right;
 }
-.footer,
-.footer1,
-.mark {
-  display: flex;
-  justify-content: flex-start;
-}
-.mark {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: center;
-  gap: var(--gap-base);
-  font-size: var(--caption-medium-medium-small-size);
-  color: var(--typography-color-body);
-}
-.footer,
-.footer1 {
-  flex-direction: column;
-  align-items: flex-start;
-}
 .footer1 {
   align-self: stretch;
   background-color: var(--fill-secondary-secondary-light);
   padding: var(--padding-21xl);
-  /* gap: var(--gap-61xl); */
   text-align: left;
   font-size: var(--caption-medium-medium-large-size);
   color: var(--typography-color-default);
-}
-.footer {
-  max-width: 100%;
-  text-align: center;
-  font-size: var(--body-moderate-size);
-  color: var(--typography-color-white);
-  font-family: var(--headline-medium-medium-moderate);
 }

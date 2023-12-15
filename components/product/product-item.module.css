@@ -1,16 +1,3 @@
-.image {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  max-height: 100%;
-  object-fit: cover;
-}
 .containerImage {
   flex: 1;
   z-index: 0;
@@ -30,6 +17,8 @@
   font-size: var(--body-moderate-size);
   line-height: 24px;
   font-weight: 500;
+  overflow: hidden;
+    height: 50px;
 }
 .labelSpecialPrice {
   display: flex;
