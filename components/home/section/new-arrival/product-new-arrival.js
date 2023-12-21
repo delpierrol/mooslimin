@@ -10,6 +10,7 @@ export default function ProductNewArrival() {
       price: 100000,
       specialPrice: 80000,
       image: "/images/product/image@2x.png",
+      image2: "/images/product/image3@2x.png",
       brand: {
         id: 1,
         name: "Brand 1"
@@ -52,7 +53,7 @@ export default function ProductNewArrival() {
 
   return (
     <div>
-      <HomeSectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
+      <HomeSectionTitle title={'Produk Terbaru'} subtitle={'Temukan Koleksi Produk Terbaru.'} button={'Belanja produk baru'}/>
       <Container className="pb-5">
         <Row className="gy-5">
           {products.map((item) => (

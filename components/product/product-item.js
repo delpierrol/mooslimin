@@ -2,26 +2,62 @@ import Image from "next/image";
 import Badge from "../badge/badge";
 import styles from "./product-item.module.css";
 import { NumericFormat } from "react-number-format";
+import React, { useState } from 'react';
 
 export default function ProductItem({ product }) {
-  console.log(product);
+  const [image, setImage] = useState(product.image);
+
+  function handleMouseEnter(product) {
+      return () => {
+          if(typeof product.image2 !== 'undefined')
+          {
+            setImage(product.image2);
+          }
+      };
+  }
+  function handleMouseOut(product) {
+      return () => {
+          setImage(product.image);
+      };
+  }
   return (
     <a href={"product/" + product.id}>
       <div className={styles.container}>
         <div className={styles.containerImage}>
-          <Image layout="fill" objectFit="cover" alt="" src={product.image} />
+          <Image 
+            layout="fill" 
+            objectFit="cover" 
+            alt={product.title} 
+            src={image} 
+            onMouseEnter={handleMouseEnter(product)}
+            onMouseOut={handleMouseOut(product)}
+          />
         </div>
         <div className={styles.containerProduct}>
           <text className={styles.brandName}>{product.brand.name}</text>
           <text className={styles.productTitle}>{product.title}</text>
           <div className={styles.labelSpecialPrice}>
-            <text>{product.specialPrice}</text>
+            <text>
+              <NumericFormat value={product.specialPrice} 
+              allowLeadingZeros 
+              thousandSeparator="." 
+              decimalSeparator="," 
+              prefix={'IDR '} 
+              displayType="text"/>
+            </text>
           </div>
           <div className={styles.labelPrice}>
-            <text className={styles.price}>{product.price}</text>
+            <text className={styles.price}>
+              <NumericFormat value={product.price} 
+              allowLeadingZeros 
+              thousandSeparator="." 
+              decimalSeparator="," 
+              prefix={'IDR '} 
+              displayType="text"/>
+            </text>
             <div className={styles.strike} />
           </div>
-          <text>Terjual 10</text>
+          <small className={styles.sold}>Terjual 10</small>
         </div>
         <Badge />
       </div>
