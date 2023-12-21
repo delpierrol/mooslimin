@@ -15,12 +15,22 @@ export default function ProductItem({ product }) {
           <text className={styles.productTitle}>{product.title}</text>
           <div className={styles.labelSpecialPrice}>
             <text>
-              <NumericFormat value={product.specialPrice} allowLeadingZeros thousandSeparator="." decimalSeparator="," prefix={'IDR'} />
+              <NumericFormat value={product.specialPrice} 
+              allowLeadingZeros 
+              thousandSeparator="." 
+              decimalSeparator="," 
+              prefix={'IDR'} 
+              displayType="text"/>
             </text>
           </div>
           <div className={styles.labelPrice}>
             <text className={styles.price}>
-              <NumericFormat value={product.price} allowLeadingZeros thousandSeparator="." decimalSeparator="," prefix={'IDR'} />
+              <NumericFormat value={product.price} 
+              allowLeadingZeros 
+              thousandSeparator="." 
+              decimalSeparator="," 
+              prefix={'IDR'} 
+              displayType="text"/>
             </text>
             <div className={styles.strike} />
           </div>
