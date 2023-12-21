@@ -13,7 +13,7 @@ export default function ProductItem({ product }) {
             objectFit="cover" 
             alt={product.title} 
             src={product.image}
-          {typeof product.image2 && (
+          {typeof product.image2 !== 'undefined' && (
                 onMouseOver={e => (e.currentTarget.src = {product.image2})} 
                 onMouseOut={e => (e.currentTarget.src = {product.image})} 
               )} />
