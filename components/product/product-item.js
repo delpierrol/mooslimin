@@ -19,7 +19,7 @@ export default function ProductItem({ product }) {
               allowLeadingZeros 
               thousandSeparator="." 
               decimalSeparator="," 
-              prefix={'IDR'} 
+              prefix={'IDR '} 
               displayType="text"/>
             </text>
           </div>
@@ -29,12 +29,12 @@ export default function ProductItem({ product }) {
               allowLeadingZeros 
               thousandSeparator="." 
               decimalSeparator="," 
-              prefix={'IDR'} 
+              prefix={'IDR '} 
               displayType="text"/>
             </text>
             <div className={styles.strike} />
           </div>
-          <text>Terjual 10</text>
+          <small className={styles.sold}>Terjual 10</small>
         </div>
         <Badge />
       </div>

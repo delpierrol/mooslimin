@@ -18,7 +18,8 @@
   line-height: 24px;
   font-weight: 500;
   overflow: hidden;
-    height: 50px;
+  height: 45px;
+  text-transform: uppercase;
 }
 .labelSpecialPrice {
   display: flex;
@@ -87,4 +88,7 @@
   font-size: var(--title-bold-bold-small-size);
   color: var(--typography-color-default);
   font-family: var(--headline-medium-medium-moderate);
+}
+.sold{
+  font-weight:100;
 }
