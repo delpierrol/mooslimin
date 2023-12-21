@@ -2,8 +2,24 @@ import Image from "next/image";
 import Badge from "../badge/badge";
 import styles from "./product-item.module.css";
 import { NumericFormat } from "react-number-format";
+import React, { useState } from 'react';
 
 export default function ProductItem({ product }) {
+  const [image, setImage] = useState(product.image);
+
+  function handleMouseEnter(product) {
+      return () => {
+          if(typeof product.image2 !== 'undefined')
+          {
+            setImage(product.image2);
+          }
+      };
+  }
+  function handleMouseOut(product) {
+      return () => {
+          setImage(product.image);
+      };
+  }
   return (
     <a href={"product/" + product.id}>
       <div className={styles.container}>
@@ -12,11 +28,10 @@ export default function ProductItem({ product }) {
             layout="fill" 
             objectFit="cover" 
             alt={product.title} 
-            src={product.image}
-          {typeof product.image2 !== 'undefined' && (
-                onMouseOver={e => (e.currentTarget.src = {product.image2})} 
-                onMouseOut={e => (e.currentTarget.src = {product.image})} 
-              )} />
+            src={image} 
+            onMouseEnter={handleMouseEnter(product)}
+            onMouseOut={handleMouseOut(product)}
+          />
         </div>
         <div className={styles.containerProduct}>
           <text className={styles.brandName}>{product.brand.name}</text>
