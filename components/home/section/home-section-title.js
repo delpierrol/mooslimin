@@ -13,7 +13,7 @@ export default function HomeSectionTitle({ title, subtitle, onClick }) {
         </Col>
         <Col xs="6" md="6" className="d-none d-md-block align-self-center text-end">
           <Button variant="outline-primary" className="btn-outline-primary"
-            onClick={onClick} >Shop new arrival Belanja produk baru</Button>
+            onClick={onClick} >{button}</Button>
         </Col>
         <Col className="d-block d-md-none align-self-center text-end">
           <Button variant="outline-primary" className="btn-outline-primary"

@@ -52,7 +52,7 @@ export default function ProductNewArrival() {
 
   return (
     <div>
-      <HomeSectionTitle title={'New arrivals Produk Baru'} subtitle={'Check out what’s new. Cari tahu yang baru.'} />
+      <HomeSectionTitle title={'Produk Terbaru'} subtitle={'Temukan Koleksi Produk Terbaru.'} button={'Belanja produk baru'}/>
       <Container className="pb-5">
         <Row className="gy-5">
           {products.map((item) => (

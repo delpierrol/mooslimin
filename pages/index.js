@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Banner />
-      // <ProductNewArrival />
+      <ProductNewArrival />
       <ProductBestSeller />
       <ProductOutfit />
       <Brand />
