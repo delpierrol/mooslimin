@@ -10,6 +10,7 @@ export default function ProductNewArrival() {
       price: 100000,
       specialPrice: 80000,
       image: "/images/product/image@2x.png",
+      image2: "/images/product/image3@2x.png"
       brand: {
         id: 1,
         name: "Brand 1"

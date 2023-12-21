@@ -8,7 +8,19 @@ export default function ProductItem({ product }) {
     <a href={"product/" + product.id}>
       <div className={styles.container}>
         <div className={styles.containerImage}>
-          <Image layout="fill" objectFit="cover" alt="" src={product.image} />
+          <Image 
+            layout="fill" 
+            objectFit="cover" 
+            alt={product.title} 
+            src={product.image}
+          {if(typeof product.image2 !== 'undefined')
+            {
+              return (
+                onMouseOver={e => (e.currentTarget.src = {product.image2})} 
+                onMouseOut={e => (e.currentTarget.src = {product.image})} 
+              )
+            }
+          } />
         </div>
         <div className={styles.containerProduct}>
           <text className={styles.brandName}>{product.brand.name}</text>

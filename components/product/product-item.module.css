@@ -8,6 +8,14 @@
   align-self: stretch;
   position: relative;
 }
+.containerImage img
+{
+  transition: all .2s ease-in-out;
+}
+.containerImage:hover img
+{
+  transform: scale(1.1);
+}
 .brandName {
   line-height: 20px;
   font-weight: 300;
@@ -26,13 +34,13 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  font-size: var(--caption-medium-medium-large-size);
 }
 .price {
   position: relative;
   line-height: 20px;
   font-weight: 500;
   gap: var(--gap-5xs);
-  font-size: var(--caption-medium-medium-large-size);
   color: var(--typography-color-inactive);
   z-index: 0;
 }
