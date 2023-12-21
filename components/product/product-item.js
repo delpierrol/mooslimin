@@ -13,14 +13,10 @@ export default function ProductItem({ product }) {
             objectFit="cover" 
             alt={product.title} 
             src={product.image}
-          {if(typeof product.image2 !== 'undefined')
-            {
-              return (
+          {typeof product.image2 && (
                 onMouseOver={e => (e.currentTarget.src = {product.image2})} 
                 onMouseOut={e => (e.currentTarget.src = {product.image})} 
-              )
-            }
-          } />
+              )} />
         </div>
         <div className={styles.containerProduct}>
           <text className={styles.brandName}>{product.brand.name}</text>
