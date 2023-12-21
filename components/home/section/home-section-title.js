@@ -1,7 +1,7 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import styles from "./home-section-title.module.css";
 
-export default function HomeSectionTitle({ title, subtitle, onClick }) {
+export default function HomeSectionTitle({ title, subtitle, button, onClick }) {
   return (
     <Container className="py-4">
       <Row className="g-3">
