@@ -1,37 +1,26 @@
-import Image from 'next/image';
-import styles from './banner.module.css';
-import utilStyles from '../../styles/utils.module.css';
-import Link from 'next/link';
-import {
-	Col,
-	Row,
-	Container,
-	Carousel
-} from "react-bootstrap";
-import React, { useState } from 'react';
+'use client';
+import Carousel from 'react-bootstrap/Carousel';
 
-export default function Banner() {
-	const [index, setIndex] = useState(0);
-
-	const handleSelect = (selectedIndex) => {
-		setIndex(selectedIndex);
-	};
+export default async function Banner({promise}) {
+	const banners = await promise
+	
 	return (
-		<Carousel className='pb-5' activeIndex={index} onSelect={handleSelect}>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="/images/ditelaga.jpg"
-					alt="First slide"
-				/>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="/images/sidekick.jpg"
-					alt="Second slide"
-				/>
-			</Carousel.Item>
+		<Carousel className='pb-5'>
+			{banners.data.promotions.map(banner => {
+				const transformedArray = banner.metas.reduce((result, item) => {
+					result[item.meta_key] = item.meta_value;
+					return result;
+				}, {});
+				const metas = transformedArray;
+				const image = JSON.parse(metas.image);
+				return (<Carousel.Item key={banner.id}>
+					<img
+						className="d-block w-100"
+						src={image.media_path}
+						alt="First slide"
+					/>
+				</Carousel.Item>)
+			})}
 		</Carousel>
 	);
 }

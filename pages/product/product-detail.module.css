@@ -7,6 +7,7 @@
 }
 .description {
   margin-bottom: 32px;
+  color: #666666;
 }
 
 label.btn:not(.btn-flat) { 

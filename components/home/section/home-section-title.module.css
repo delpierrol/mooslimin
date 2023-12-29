@@ -14,9 +14,9 @@
   width: 648px;
 }
 .subtitle {
-  font-size: var(--title-bold-bold-small-size);
+  font-size: var(--body-moderate-size);
   line-height: 20px;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--typography-color-body);
   margin-top: 0.5rem !important;
 }

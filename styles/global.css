@@ -6,7 +6,7 @@ body {
   font-family: var(--caption-regular-regular-small) !important;
   font-size: var(--caption-medium-medium-large-size) !important;
   color: var(--typography-color-default) !important;
-    margin-top: 6rem !important;
+    margin-top: 4rem !important;
 }
 :root {
   /* fonts */
@@ -112,6 +112,10 @@ body {
   {
     width:100%;
     transform: translate(0px, -5px);
+  }
+  .btn{
+    --bs-btn-padding-x: 1rem !important;
+    --bs-btn-padding-y: 0.75rem !important;
   }
   .btn-primary {
     background-color: var(--fill-primary-primary-default) !important;
